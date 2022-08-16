@@ -5,7 +5,7 @@ Widget TextView(String txt, var size, var color_type, var font) {
     children: [
       Text(
         txt,
-        style: TextStyle(color: color_type, fontSize: size, fontWeight: font),
+        style: TextStyle(color: color_type, fontSize: size, fontWeight: font,),
       ),
     ],
   );

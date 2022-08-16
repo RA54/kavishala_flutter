@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kavishala_flutter/splashscreen.dart';
+import 'package:kavishala_flutter/screen/homescreen.dart';
+import 'package:kavishala_flutter/screen/loginactivity.dart';
+import 'package:kavishala_flutter/screen/splashscreen.dart';
 import 'package:kavishala_flutter/util/router.dart';
 import 'package:kavishala_flutter/util/theme.dart';
 
@@ -19,9 +21,11 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => SplashScreen(),
         MyRoutes.splashRoute: (context) => SplashScreen(),
-        // MyRoutes.homeRoute: (context) => HomeScreen(),
-        // MyRoutes.loginRoute: (context) => Login(),
+        MyRoutes.homeRoute: (context) => HomeScreen(),
+        MyRoutes.loginRoute: (context) => LoginActivity(),
       },
     );
   }
 }
+
+
