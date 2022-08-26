@@ -35,13 +35,20 @@ class HomeController extends GetxController {
     }
   }
 
-  RxList<SootradharPojo> addresslist = <SootradharPojo>[].obs;
+  RxList<SootradharPojo> sootradharPojolist = <SootradharPojo>[].obs;
   getAllSootradhar() async {
     try {
       Response response = await _dio.get(Api.Sootradhar_main);
       if (response.statusCode == 200) {
-        print(response.data.toString());
-        //myAllCoroselImage.addAll(response.data);
+      //  print(response.data.toString());
+        for (int i = 0; i < response.data.length; i++) {
+          //orderList.add(Order.fromJson(response.data[i]));
+          var jsonArray = response.data[i];
+          for(int j=0;j<jsonArray.length;j++){
+            print(jsonArray[j]);
+            sootradharPojolist.add(SootradharPojo.fromMap(jsonArray[j]));
+          }
+        }
       } else {
         print("Status Code Not 200");
       }
@@ -52,7 +59,7 @@ class HomeController extends GetxController {
 
   reloadScreenData() {
     getAllMyCorouselImage();
-   // getAllHomeOpinions();
+    getAllHomeOpinions();
     getAllSootradhar();
   }
 }

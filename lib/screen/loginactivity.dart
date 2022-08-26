@@ -62,7 +62,8 @@ class LoginActivity extends StatelessWidget {
                   child: SignInButton(
                     Buttons.Google,
                     text: "Continue with Google",
-                    onPressed: () {},
+                    onPressed: () {
+                    },
                   ),
                 ),
                 SizedBox(height: 12),

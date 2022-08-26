@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:kavishala_flutter/screen/loginactivity.dart';
 import 'package:kavishala_flutter/util/constants.dart';
 import 'package:kavishala_flutter/widgets/text.dart';
 
@@ -120,6 +122,7 @@ class SplashScreen extends StatelessWidget {
                 SizedBox(height: 25),
                 GestureDetector(
                   onTap: () {
+                    Get.to(LoginActivity());
                     print("Hello");
                   },
                   child: Row(
